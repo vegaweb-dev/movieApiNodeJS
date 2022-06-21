@@ -11,10 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Routes
-
-app.get('/', (req, res) => {
-	res.send('test');
-});
+app.use(require('./routes/index.js'));
+app.use('/api/movies', require('./routes/movies.js'));
 
 //Starting the server
 app.listen(app.get('port'), () => {
