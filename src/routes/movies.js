@@ -22,4 +22,14 @@ router.post('/', (req, res) => {
 	res.json(movies);
 });
 
+router.delete('/:id', (req, res) => {
+	const { id } = req.params;
+	movies.forEach((movie, i) => {
+		if (movie.id == id) {
+			movies.splice(i, 1);
+		}
+	}); //para recorrer el arreglo tambien se puede usar el metodo each descargando la libreria underscore.js :slightly_smiling_face:
+	res.send(movies);
+});
+
 module.exports = router;
