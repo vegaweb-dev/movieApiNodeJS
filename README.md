@@ -10,7 +10,7 @@
 
 ### If you wanna see how a POST might look likes see the pic below
 
-![](https://github.com/vegaweb-dev/movieApiNodeJS/issues/1)
+![](https://user-images.githubusercontent.com/81848271/175382420-3931218d-24ad-4561-9dce-2cca08f818bb.jpg)
 
 ---
 
