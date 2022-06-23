@@ -22,6 +22,24 @@ router.post('/', (req, res) => {
 	res.json(movies);
 });
 
+router.put('/:id', (req, res) => {
+	const { id } = req.params;
+	const { title, author, rating } = req.body;
+	console.log(title);
+	if (title && author && rating) {
+		movies.forEach((movie) => {
+			if (movie.id == id) {
+				movie.title = title;
+
+				movie.author = author;
+				movie.rating = rating;
+			}
+		});
+	} else {
+		res.send('error');
+	}
+	res.json(movies);
+});
 router.delete('/:id', (req, res) => {
 	const { id } = req.params;
 	movies.forEach((movie, i) => {
